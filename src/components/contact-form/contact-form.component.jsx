@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { CustomButton } from "../custom-button/custom-button.component";
 import { CustomInput } from "../custom-input/custom-input.component";
 import { CustomTextArea } from "../custom-text-area/custom-text-area.component";
+import emailjs from 'emailjs-com';
 import "./contact-form.styles.scss";
 
 export const ContactForm = () => {
@@ -29,13 +30,31 @@ export const ContactForm = () => {
     }
   };
 
+  const handleSubmit = async(event) => {   
+    event.preventDefault();
+   try{
+      emailjs.send('contact_service', 'contact_form',{
+      from_name: `${firstName} ${lastName}`,
+      message: comment,
+      email:email
+    }, 'user_RMkv4Xk720JMhtey0EJvM');    
+      setFirstName("");
+      setLastName("");
+      setComment("")
+      setEmail("");
+      console.log("Message Sent Successfully")
+
+   }catch(err){console.log(err)} 
+   
+  };
+
   return (
     <div className="contact-form-container">
 
       <div>
         <h1>Please use the form below to contact us.</h1>
       </div>
-      <form className="contact-form">
+      <form className="contact-form" onSubmit={handleSubmit}>
         <CustomInput
           name="fname"
           type="name"
@@ -68,7 +87,7 @@ export const ContactForm = () => {
           required
         />
         <div className='btn-container'>
-          <CustomButton >Submit</CustomButton>
+          <CustomButton type='submit'>Submit</CustomButton>
         </div>
        
       </form>
