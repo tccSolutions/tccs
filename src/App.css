@@ -1,8 +1,7 @@
 .App {
   text-align: center;
-  font-family: 'Libre Baskerville', serif;
-  padding: 1em 2em;
- 
+  font-family: 'Libre Baskerville', serif; 
+  color:white; 
 }
 
 *{
@@ -12,5 +11,5 @@
 a{
   text-decoration: none;
   font-weight: bold;
-  color: black;
+  color: white;
 }

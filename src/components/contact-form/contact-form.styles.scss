@@ -3,10 +3,13 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    color:white;
+    
 .contact-form{
     display: flex;
     flex-direction: column;
     justify-content: center;
+    background-color: rgba(128, 128, 128, 0.678);
     width: 600px;
 
     .btn-container{
