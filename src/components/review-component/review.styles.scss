@@ -1,0 +1,18 @@
+.review{
+    display: flex;
+    flex-direction: column;
+    overflow-y: hidden;   
+
+    .name{
+        
+    }
+
+    .comment{
+        font-weight: lighter;
+    }
+
+    .date{
+        color:rgb(243, 229, 229);
+        font-size: 12px;
+    }
+}
