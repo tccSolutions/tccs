@@ -21,3 +21,22 @@
     }
     
 }
+
+@media only screen and (max-width:600px){
+    .greeting{
+        margin: 5em 0;
+
+        .title{
+            font-size: 30px;
+        }
+        .message-container{
+            width:95%;
+
+            .message{
+                width:100%;
+            }
+            
+          
+        }
+    }
+}
