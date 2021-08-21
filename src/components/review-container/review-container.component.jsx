@@ -7,27 +7,30 @@ import "./review-container.styles.scss";
 
 export const ReviewsContainer = ({setDisplayForm}) => {
   const [custReviews, setReviews] = useState([]);
-  const [loading, setLoading] = useState();
+  const [loading, setLoading] = useState(true);
 
-  const getReviews = async () => {
-    try {
-      const snapshot = await getDocs(collection(db, "reviews"));
-      snapshot.forEach((doc) => {
-        let review = {
-          id: doc.id,
-          ...doc.data()
-        }
-       custReviews.push(review);
-      
-      });
-      setLoading(false);     
-    } catch (err) {
-      console.log(err.message);
-    }
-  };
+  
+  
 
   useEffect(() => {
-    getReviews();
+    const getReviews = async () => {
+      try {
+        
+        const snapshot = await getDocs(collection(db, "reviews"));
+        snapshot.forEach((doc) => {
+        
+       setReviews(prevState =>[...prevState,{id:doc.id,...doc.data()}])
+      
+        
+        });
+        
+        
+        setLoading(false)
+      } catch (err) {
+        console.log(err.message);
+      }
+    };
+    getReviews()
   },[]);
 
   return loading ? (

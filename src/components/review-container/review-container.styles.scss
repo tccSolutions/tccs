@@ -1,12 +1,23 @@
 .review-container{
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    flex-direction: column;   
     align-items: center;
-    height:500px;
+    justify-content: center;
+    height:600px;
+   
+   
 
     .reviews{
-        height: 95%;
-        align-items: flex-start;
+        display:flex;
+        flex-direction: column;
+        height:85%;
+        width:100%;
+        align-items: center;       
+        overflow-y: scroll;
+        padding: 4em;
+    }
+
+    button{
+        margin-top: 5em;
     }
 }

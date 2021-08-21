@@ -1,7 +1,9 @@
 .review{
     display: flex;
-    flex-direction: column;
-    overflow-y: hidden;   
+    flex-direction: column;    
+    border-bottom: 1px dotted black;
+    width:45%;
+    height:35%;   
 
     .name{
         

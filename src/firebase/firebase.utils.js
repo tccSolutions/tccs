@@ -1,5 +1,5 @@
 import { initializeApp } from "firebase/app";
-import { addDoc, collection, getFirestore } from "firebase/firestore";
+import { addDoc, collection, getFirestore, getDocs } from "firebase/firestore";
 
 const config = {
   apiKey: "AIzaSyBt8Psc_HxP1UpM51U5A2SElondO27rjAs",
@@ -12,6 +12,8 @@ const config = {
 
 const firebaseApp = initializeApp(config);
 const db = getFirestore();
+
+
 
 const addReview = async (name, comment) => {
   try {
@@ -30,4 +32,4 @@ const addReview = async (name, comment) => {
   }
 };
 
-export { db, addReview };
+export { db, addReview};
