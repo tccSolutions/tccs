@@ -1,7 +1,12 @@
 import React from 'react';
+import {Navbar} from '../../components/navbar/navbar.component'
 
 export const AboutPage = () => (
-    <div style={{marginTop: '35vh'}}>
-       <h1>UNDER CONSTRUCTION</h1>
+    <div>
+        <Navbar/>
+      
+        <h1>UNDER CONSTRUCTION</h1>
+       
+       
     </div>
 )
