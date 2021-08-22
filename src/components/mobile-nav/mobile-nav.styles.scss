@@ -1,0 +1,43 @@
+.mobile-nav{
+    display:none;
+
+    .icon {
+        width: 30px;
+        height: 30px;
+    
+        &:hover {
+          cursor: pointer;
+    
+          transform: scale(1.1);
+          color: gainsboro;
+        }
+      }
+    
+}
+
+@media screen and (max-width: 600px) {
+    .mobile-nav {
+        display:flex;
+      .links {
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        position:fixed;
+        top:4.5em;
+        right:0px;
+        background-color: grey;
+        width: 100%;
+
+       a{
+            border-bottom: 2px solid black;
+        }
+      }
+      .icon {
+        visibility: visible;
+        position:fixed;
+        right: 25px;
+        top:25px;
+      }
+    }
+  }
+  
