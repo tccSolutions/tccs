@@ -9,7 +9,7 @@ export const MobileNav = () => {
   return (
     <div className="mobile-nav">
       <div>
-        <img src={navIcon} className="icon" onClick={()=>setShowMenu(!showMenu)} />
+        <img src={navIcon} alt='icon' className="icon" onClick={()=>setShowMenu(!showMenu)} />
       </div>
         {showMenu?
       <div className="links">

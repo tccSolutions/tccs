@@ -1,11 +1,8 @@
 import React from 'react';
-import {Navbar} from '../../components/navbar/navbar.component'
 import "./about.styles.scss"
 
 export const AboutPage = () => (
-    <div className='about'>
-        <Navbar/>
-      
+    <div className='about'>      
         <h1>About Us</h1>
         <h3 className='message'>Tim began repairing and building computers when he was 12 years old. He soon discovered that he had a passion
             for computers and he started to learn to code. As the years went on he obtained his Bachelor's Degree in Computer Information Systems.
