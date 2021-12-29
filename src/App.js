@@ -12,7 +12,7 @@ function App() {
     <BrowserRouter>
       <div className="App">
         <Switch>
-          <Route exact path="/tccs" component={Homepage} />
+          <Route exact path="tccs/" component={Homepage} />
           <div>
             <Navbar />
             <Route exact path="/about" component={AboutPage} />
